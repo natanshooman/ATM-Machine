@@ -9,6 +9,6 @@ public class ATM {
 	}
 
 	public static void introduction() {
-		System.out.println("Welcome to the ATM Project!");
+		System.out.println("Welcome to the ATM Project");
 	}
 }

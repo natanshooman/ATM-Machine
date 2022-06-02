@@ -9,6 +9,8 @@ public class Account {
 	private double checkingBalance = 0;
 	private double savingBalance = 0;
 
+	private String errorMessage = "Unfortunatly, your bank balance is not enough to complete this transaction. Please add some more money to the account and then try again shortly.";
+	
 	Scanner input = new Scanner(System.in);
 	DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
 
@@ -95,7 +97,7 @@ public class Account {
 					System.out.println("\nCurrent Checkings Account Balance: " + moneyFormat.format(checkingBalance));
 					end = true;
 				} else {
-					System.out.println("\nBalance Cannot be Negative.");
+					System.out.println("\nUnfortunatly, this bank currently doesn't give out free money thus your bank balance can not be Negative.");
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("\nInvalid Choice.");
@@ -116,7 +118,7 @@ public class Account {
 					System.out.println("\nCurrent Savings Account Balance: " + moneyFormat.format(savingBalance));
 					end = true;
 				} else {
-					System.out.println("\nBalance Cannot Be Negative.");
+					System.out.println(errorMessage);
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("\nInvalid Choice.");
@@ -137,7 +139,7 @@ public class Account {
 					System.out.println("\nCurrent Checkings Account Balance: " + moneyFormat.format(checkingBalance));
 					end = true;
 				} else {
-					System.out.println("\nBalance Cannot Be Negative.");
+					System.out.println(errorMessage);
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("\nInvalid Choice.");
@@ -159,7 +161,7 @@ public class Account {
 					System.out.println("\nCurrent Savings Account Balance: " + moneyFormat.format(savingBalance));
 					end = true;
 				} else {
-					System.out.println("\nBalance Cannot Be Negative.");
+					System.out.println(errorMessage);
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("\nInvalid Choice.");
@@ -190,7 +192,7 @@ public class Account {
 									"\nCurrent Checkings Account Balance: " + moneyFormat.format(checkingBalance));
 							end = true;
 						} else {
-							System.out.println("\nBalance Cannot Be Negative.");
+							System.out.println(errorMessage);
 						}
 						break;
 					case 2:
@@ -216,7 +218,7 @@ public class Account {
 							System.out.println("\nCurrent savings account balance: " + moneyFormat.format(savingBalance));
 							end = true;
 						} else {
-							System.out.println("\nBalance Cannot Be Negative.");
+							System.out.println(errorMessage);
 						}
 						break;
 					case 2:
